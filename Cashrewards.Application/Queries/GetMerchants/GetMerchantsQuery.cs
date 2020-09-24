@@ -1,4 +1,4 @@
-﻿using Cashrewards.Application.Common.Requests;
+﻿using Cashrewards.Application.Infrastructures.Requests;
 
 namespace Cashrewards.Application.Queries.GetMerchants
 {

@@ -1,7 +1,7 @@
 ﻿using FluentResults;
 using System.Net;
 
-namespace Cashrewards.Application.Common.Reponses
+namespace Cashrewards.Application.Infrastructures.Reponses
 {
     public class ValueResponse<TValue> : Response where TValue : class
     {

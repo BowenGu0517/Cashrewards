@@ -1,7 +1,9 @@
-﻿using Cashrewards.Application.Common.Reponses;
+﻿using AutoMapper;
+using Cashrewards.Application.Infrastructures.Reponses;
 using Cashrewards.Application.Interfaces;
+using Cashrewards.ViewModel;
 using MediatR;
-using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,10 +13,14 @@ namespace Cashrewards.Application.Queries.GetMerchants
     public class GetMerchantsHandler : IRequestHandler<GetMerchantsQuery, Response>
     {
         private readonly IMerchantRepository _merchantRepository;
+        private readonly IMapper _mapper;
 
-        public GetMerchantsHandler(IMerchantRepository merchantRepository)
+        public GetMerchantsHandler(
+            IMerchantRepository merchantRepository,
+            IMapper mapper)
         {
             _merchantRepository = merchantRepository;
+            _mapper = mapper;
         }
 
         public async Task<Response> Handle(GetMerchantsQuery request, CancellationToken cancellationToken)
@@ -25,9 +31,10 @@ namespace Cashrewards.Application.Queries.GetMerchants
                 return new Response(HttpStatusCode.BadRequest);
             }
 
-            var getMerchantsDto = getMerchantsResult.Value;
+            var merchantsDto = getMerchantsResult.Value;
+            var merchantsViewModel = _mapper.Map<IEnumerable<MerchantViewModel>>(merchantsDto);
 
-            throw new NotImplementedException();
+            return new ValueResponse<IEnumerable<MerchantViewModel>>(HttpStatusCode.OK, merchantsViewModel);
         }
     }
 }

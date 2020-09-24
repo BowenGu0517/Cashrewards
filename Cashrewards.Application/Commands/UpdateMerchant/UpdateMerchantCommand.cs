@@ -1,4 +1,5 @@
-﻿using Cashrewards.Application.Common.Requests;
+﻿using Cashrewards.Application.Infrastructures.Requests;
+using System;
 
 namespace Cashrewards.Application.Commands.UpdateMerchant
 {

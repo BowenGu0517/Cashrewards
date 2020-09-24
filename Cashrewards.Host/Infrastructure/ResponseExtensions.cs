@@ -1,4 +1,4 @@
-﻿using Cashrewards.Application.Common.Reponses;
+﻿using Cashrewards.Application.Infrastructures.Reponses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cashrewards.Host.Infrastructure

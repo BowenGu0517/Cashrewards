@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cashrewards.Host", "Cashrew
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cashrewards.ViewModel", "Cashrewards.ViewModel\Cashrewards.ViewModel.csproj", "{5D578A75-3E3D-42C8-A536-28228F18EA73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cashrewards.Domain", "Cashrewards.Domain\Cashrewards.Domain.csproj", "{F75DB0E0-251C-4988-822C-9011D5C27A98}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cashrewards.Application", "Cashrewards.Application\Cashrewards.Application.csproj", "{448F2253-B2D4-4487-884B-84AC80A15123}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cashrewards.Infrastructure", "Cashrewards.Infrastructure\Cashrewards.Infrastructure.csproj", "{B54332B5-172D-49D8-A6C8-78636EC5226E}"
@@ -31,10 +29,6 @@ Global
 		{5D578A75-3E3D-42C8-A536-28228F18EA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D578A75-3E3D-42C8-A536-28228F18EA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D578A75-3E3D-42C8-A536-28228F18EA73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F75DB0E0-251C-4988-822C-9011D5C27A98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F75DB0E0-251C-4988-822C-9011D5C27A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F75DB0E0-251C-4988-822C-9011D5C27A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F75DB0E0-251C-4988-822C-9011D5C27A98}.Release|Any CPU.Build.0 = Release|Any CPU
 		{448F2253-B2D4-4487-884B-84AC80A15123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{448F2253-B2D4-4487-884B-84AC80A15123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{448F2253-B2D4-4487-884B-84AC80A15123}.Release|Any CPU.ActiveCfg = Release|Any CPU

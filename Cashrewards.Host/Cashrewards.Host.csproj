@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
     <PackageReference Include="MediatR" Version="8.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.2" />
   </ItemGroup>
@@ -23,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cashrewards.Application\Cashrewards.Application.csproj" />
+    <ProjectReference Include="..\Cashrewards.Infrastructure\Cashrewards.Infrastructure.csproj" />
     <ProjectReference Include="..\Cashrewards.ViewModel\Cashrewards.ViewModel.csproj" />
   </ItemGroup>
 
