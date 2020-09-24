@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Cashrewards.Application.Commands.CreateMerchant;
+using Cashrewards.Application.Commands.UpdateMerchant;
 using Cashrewards.Dto;
 using Cashrewards.ViewModel;
 
@@ -9,7 +11,8 @@ namespace Cashrewards.Application.Infrastructures
         public MappingProfile()
         {
             CreateMap<MerchantDto, MerchantViewModel>();
-            CreateMap<MerchantViewModel, MerchantDto>();
+            CreateMap<CreateMerchantCommand, MerchantDto>();
+            CreateMap<UpdateMerchantCommand, MerchantDto>();
         }
     }
 }

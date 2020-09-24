@@ -2,6 +2,7 @@
 using Cashrewards.Application.Infrastructures.Reponses;
 using Cashrewards.Application.Interfaces;
 using Cashrewards.Dto;
+using Cashrewards.ViewModel;
 using MediatR;
 using System.Net;
 using System.Threading;
@@ -31,9 +32,9 @@ namespace Cashrewards.Application.Queries.GetMerchant
             }
 
             var merchantDto = getMerchantResult.Value;
-            var merchantViewModel = _mapper.Map<MerchantDto>(merchantDto);
+            var merchantViewModel = _mapper.Map<MerchantViewModel>(merchantDto);
 
-            return new ValueResponse<MerchantDto>(HttpStatusCode.BadRequest, merchantViewModel);
+            return new ValueResponse<MerchantViewModel>(HttpStatusCode.OK, merchantViewModel);
         }
     }
 }

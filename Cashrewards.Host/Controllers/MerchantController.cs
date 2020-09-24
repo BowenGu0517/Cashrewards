@@ -12,11 +12,9 @@ using System.Threading.Tasks;
 
 namespace Cashrewards.Host.Controllers
 {
-    [Route("api/merchant")]
-    public class MerchantController : BaseController
+    public class MerchantsController : BaseController
     {
-
-        [HttpGet("merchants")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<MerchantViewModel>>> GetMerchants()
         {
             var request = new GetMerchantsQuery();
@@ -26,8 +24,8 @@ namespace Cashrewards.Host.Controllers
             return response.ToActionResult<IEnumerable<MerchantViewModel>>();
         }
 
-        [HttpGet("merchant/{uniqueId}")]
-        public async Task<ActionResult<MerchantViewModel>> GetMerchant([FromQuery][Required] string uniqueId)
+        [HttpGet("{uniqueId}")]
+        public async Task<ActionResult<MerchantViewModel>> GetMerchant([FromRoute][Required] string uniqueId)
         {
             var request = new GetMerchantQuery
             {
@@ -39,7 +37,7 @@ namespace Cashrewards.Host.Controllers
             return response.ToActionResult<MerchantViewModel>();
         }
 
-        [HttpPost("merchant")]
+        [HttpPost]
         public async Task<ActionResult> CreateMerchant([FromBody][Required] CreateMerchantCommand request)
         {
             var response = await Mediator.Send(request);
@@ -47,7 +45,7 @@ namespace Cashrewards.Host.Controllers
             return response.ToActionResult();
         }
 
-        [HttpPut("merchant")]
+        [HttpPut]
         public async Task<ActionResult> UpdateMerchant([FromBody][Required] UpdateMerchantCommand request)
         {
             var response = await Mediator.Send(request);
@@ -55,8 +53,8 @@ namespace Cashrewards.Host.Controllers
             return response.ToActionResult();
         }
 
-        [HttpDelete("merchant/{uniqueId}")]
-        public async Task<ActionResult> DeleteMerchant([FromQuery][Required] string uniqueId)
+        [HttpDelete("{uniqueId}")]
+        public async Task<ActionResult> DeleteMerchant([FromRoute][Required] string uniqueId)
         {
             var request = new DeleteMerchantCommand
             {

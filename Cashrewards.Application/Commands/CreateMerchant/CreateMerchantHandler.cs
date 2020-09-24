@@ -3,6 +3,7 @@ using Cashrewards.Application.Infrastructures.Reponses;
 using Cashrewards.Application.Interfaces;
 using Cashrewards.Dto;
 using MediatR;
+using System;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,6 +26,8 @@ namespace Cashrewards.Application.Commands.CreateMerchant
         public async Task<Response> Handle(CreateMerchantCommand request, CancellationToken cancellationToken)
         {
             var createMerchantRequest = _mapper.Map<MerchantDto>(request);
+            createMerchantRequest.UniqueId = Guid.NewGuid().ToString();
+
             var createMerchantResult = await _merchantRepository.CreateMerchant(createMerchantRequest);
             
             return createMerchantResult.IsSuccess
