@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > div {
+  margin-bottom: 2rem;
+}
+
+.container > div.header h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}

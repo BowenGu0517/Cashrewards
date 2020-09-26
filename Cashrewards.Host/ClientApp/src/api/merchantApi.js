@@ -35,10 +35,11 @@ export const createMerchant = (body) => {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
     },
-    body: { ...body },
+
+    body: JSON.stringify(body),
   };
 
-  return fetch(baseUrl, options).then(handleResponse).catch(handleError);
+  return fetch(baseUrl, options);
 };
 
 export const updateMerchant = (body) => {
@@ -48,10 +49,10 @@ export const updateMerchant = (body) => {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
     },
-    body: { ...body },
+    body: JSON.stringify(body),
   };
 
-  return fetch(baseUrl, options).then(handleResponse).catch(handleError);
+  return fetch(baseUrl, options);
 };
 
 export const deleteMerchant = (uniqueId) => {
@@ -63,7 +64,5 @@ export const deleteMerchant = (uniqueId) => {
     },
   };
 
-  return fetch(`${baseUrl}${uniqueId}`, options)
-    .then(handleResponse)
-    .catch(handleError);
+  return fetch(`${baseUrl}${uniqueId}`, options);
 };

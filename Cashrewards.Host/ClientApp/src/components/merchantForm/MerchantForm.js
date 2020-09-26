@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TextInput from "../textInput/TextInput";
 import Select from "../select/Select";
 import NumberInput from "../numberInput/NumberInput";
@@ -41,7 +42,7 @@ const MerchantForm = (props) => {
         error={props.errors.discountPercentage}
       />
       <div className="form-group">
-        <label htmlFor="status">Status</label>
+        <label htmlFor="isActive">IsActive</label>
         <div className="field">
           <input
             id="isActive"
@@ -49,11 +50,17 @@ const MerchantForm = (props) => {
             name="isActive"
             checked={props.merchant.isActive}
             onChange={props.onChange}
-            className="form-control"
           />
         </div>
       </div>
-      <input type="submit" value="Save" className="btn btn-primary" />
+      <input
+        type="submit"
+        value={props.merchant.uniqueId ? "Save" : "Add"}
+        className="btn btn-primary"
+      />
+      <Link className="btn btn-secondary" style={{ marginLeft: "1rem" }} to="/">
+        Cancel
+      </Link>
     </form>
   );
 };

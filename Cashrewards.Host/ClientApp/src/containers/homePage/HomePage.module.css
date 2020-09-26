@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > div {
+  margin-bottom: 2rem;
+}
+
+.container > div.header {
+  text-align: center;
+}
+
+.container > div.header h2 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.container > div.create {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .container > div.header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}

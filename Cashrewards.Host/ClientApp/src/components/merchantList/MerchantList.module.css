@@ -1,0 +1,9 @@
+.container {
+  overflow-x: auto;
+}
+
+.container .table,
+td,
+th {
+  vertical-align: middle !important;
+}

@@ -17,7 +17,10 @@ const Select = (props) => {
           onChange={props.onChange}
           className="form-control"
         >
-          <option value="" />
+          {props.options.filter((option) => option === props.value).length ===
+          0 ? (
+            <option value="" />
+          ) : null}
           {props.options.map((option, index) => {
             return (
               <option key={index} value={option}>
