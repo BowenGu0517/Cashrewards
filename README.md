@@ -7,7 +7,7 @@ ASP.NET Core Web API 3.1 + React 16.13.1 + SQL Server 2017 latest ubuntu docker 
 ## Steps to run the project
 Under VS 2019:
 - Run `docker-compose up` to fire up the linux sql server express 2017 docker container 
-- Publish "DataBase" project with profile "DataBase.publish.xml" under it, it will generate the `Cashrewards` database and `Merchant` table
+- Publish "DataBase" project with `Load Profile` "DataBase.publish.xml" under it, it will generate the `Cashrewards` database and `Merchant` table
 - Build and Start the Visual Studio Solution as one go (Or run `npm install` followed by `npm start` separately to only start the frontend project). The project is using CRA template as frontend wich integrates with .net core Web API as backend. The CRA project folder is under `Cashrewards.Host/ClientApp`
 
 
