@@ -3,7 +3,7 @@
 ## Demo website
 https://cashrewardswebapi.azurewebsites.net/
 
-This is the quick demo of the project hosted in Azure Web app service
+This is the quick demo of the project hosted in Azure Web app service (Free tier so might not be super stable :) )
 
 
 ## Tech stacks
@@ -24,9 +24,9 @@ Backend is using clean architecuture:
 - `Cashrewards.Host` manages the backend surface web apis. The `MerchantsController` defines all the CRUD endpoints required for the project.
 
 Frontend:
-- `Cashrewards.Host\ClientApp\src\components` defines all the re-usable functional components
-- `Cashrewards.Host\ClientApp\src\containers`defines all the higher level container components
-- `Cashrewards.Host\ClientApp\src\api` defines all the apis which interact with backend apis
+- `Cashrewards.Host/ClientApp/src/components` defines all the re-usable functional components
+- `Cashrewards.Host/ClientApp/src/containers`defines all the higher level container components
+- `Cashrewards.Host/ClientApp/src/api` defines all the apis which interact with backend apis
 
 Tests:
 - `Cashrewards.Unit.Test` and `Cashrewards.Funtional.Test` are the unit and functional tests for backend project, by using Xunit, Moq.
@@ -34,12 +34,13 @@ Tests:
 
 
 ## Project Feature
-1. Show all the available merchats in the application home page, as a table.
+1. Show all the available merchants in the application home page, as a table.
 2. Provide the functionality of creating new merchant
 3. Provide the functionality of editing a existing merchant
 4. Provide the functionality of deleting a existing merchant
 5. Request paramter format validation for both frontend and backend 
 6. Each CRUD action has been separated in backend so easier for manage and align to the separation of concern principle.
+7. Front-end is responsive, by using media queries.
 
 
 ## Things to be improved
