@@ -6,8 +6,6 @@ namespace Cashrewards.Funtional.Test.Mock
 {
     public static class MockHelper
     {
-        public const string BaseUrl = "http://localhost";
-
         private const string MEDIA_TYPE_JSON = "application/json";
 
         public static HttpRequestMessage CreateHttpRequestMessage(
