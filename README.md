@@ -1,5 +1,11 @@
 # Cashrewards
 
+## Demo website
+https://cashrewardswebapi.azurewebsites.net/
+
+This is the quick demo of the project hosted in Azure Web app service
+
+
 ## Tech stacks
 ASP.NET Core Web API 3.1 + React 16.13.1 + SQL Server 2017 latest ubuntu docker image
 
